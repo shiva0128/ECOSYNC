@@ -354,7 +354,6 @@ export const MockDbProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     // 3. Create e-waste disposal log automatically (Circular Loop requirement!)
     const req = requirements.find(r => r.id === requirementId);
-    const bid = bids.find(b => b.id === bidId);
     if (!req) return;
 
     const cat = categories.find(c => c.id === req.categoryId);

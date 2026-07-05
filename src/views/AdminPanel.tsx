@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMockDb } from '../context/MockDbContext';
-import type { Category } from '../context/MockDbContext';
 import { Check, X, Shield, PlusCircle, Users, Layers, ShieldAlert, Award, FileSpreadsheet } from 'lucide-react';
 
 export const AdminPanel: React.FC = () => {

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { MockDbProvider, useMockDb } from './context/MockDbContext';
-import type { UserRole } from './context/MockDbContext';
 import { LandingPage } from './views/LandingPage';
 import { AuthPage } from './views/AuthPage';
 import { AdminPanel } from './views/AdminPanel';

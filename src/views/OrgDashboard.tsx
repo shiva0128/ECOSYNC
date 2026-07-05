@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMockDb } from '../context/MockDbContext';
-import type { Requirement } from '../context/MockDbContext';
 import { calculateSavings } from '../utils/savingsCalculator';
 import { 
   ResponsiveContainer, 
@@ -13,7 +12,6 @@ import {
 } from 'recharts';
 import { 
   TrendingUp, 
-  Clock, 
   Leaf, 
   Trash2, 
   Activity, 
