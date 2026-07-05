@@ -10,6 +10,13 @@
 
 ---
 
+## 📹 Interactive Demo Walkthrough
+Below is an animated walkthrough of the entire end-to-end circular procurement and recycling loop:
+
+![Interactive circular loop walkthrough](public/screenshots/ecosync_demo_walkthrough.webp)
+
+---
+
 ## 🔁 B2B Circular Procurement Workflow
 
 The core value proposition of EcoSync is its end-to-end circular loop. The lifecycle transitions seamlessly from financial modeling to equipment delivery and verified recycling:
