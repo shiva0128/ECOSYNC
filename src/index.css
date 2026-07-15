@@ -2,7 +2,15 @@
 
 @layer base {
   body {
-    background-color: #f8fafc; /* bg-slate-50 */
+    background-color: #92e269; /* base vibrant green */
+    background-image: 
+      radial-gradient(at 0% 30%, #eff7ad 0%, transparent 60%),
+      radial-gradient(at 100% 0%, #b3edd7 0%, transparent 50%),
+      radial-gradient(at 100% 50%, #76d048 0%, transparent 60%),
+      radial-gradient(at 50% 100%, #e2f578 0%, transparent 50%),
+      radial-gradient(at 10% 90%, #d8ee66 0%, transparent 50%);
+    background-attachment: fixed;
+    background-size: cover;
     color: #0f172a; /* text-slate-900 */
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     -webkit-font-smoothing: antialiased;

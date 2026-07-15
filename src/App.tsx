@@ -62,26 +62,12 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans transition-all duration-300">
+    <div className="min-h-screen bg-transparent text-slate-800 flex flex-col font-sans transition-all duration-300">
       {/* Top Header Bar */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 md:px-8 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Logo */}
-          <div 
-            onClick={() => handleNavigate('landing')} 
-            className="flex items-center gap-2 cursor-pointer group"
-          >
-            <div className="p-2 bg-emerald-50 rounded-lg border border-emerald-200 text-emerald-600 group-hover:bg-emerald-100 transition-all duration-300">
-              <Leaf size={20} className="group-hover:rotate-12 transition-transform" />
-            </div>
-            <div>
-              <span className="text-lg font-black tracking-tight text-slate-900">EcoSync</span>
-              <span className="text-[10px] block text-emerald-600 font-bold uppercase tracking-wider -mt-1">Circular SaaS</span>
-            </div>
-          </div>
-
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200 px-4 md:px-8 py-3 shadow-sm">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-3 flex justify-between items-center gap-4">
+          {/* Navigation Links (Left) */}
+          <nav className="hidden md:flex items-center gap-6 text-sm col-start-1 justify-self-start">
             <button 
               onClick={() => handleNavigate('landing')}
               className={`flex items-center gap-1.5 font-semibold transition ${
@@ -105,8 +91,24 @@ const AppContent: React.FC = () => {
             )}
           </nav>
 
-          {/* User Section / Authentication */}
-          <div className="flex items-center gap-4 text-xs">
+          {/* Logo Badge (Center) */}
+          <div 
+            onClick={() => handleNavigate('landing')} 
+            className="flex flex-col items-center justify-center cursor-pointer group select-none col-start-2 justify-self-center py-1"
+          >
+            <div className="relative p-2.5 bg-emerald-50 rounded-full border border-emerald-200 text-emerald-600 group-hover:bg-emerald-100 transition-all duration-300 shadow-sm flex items-center justify-center">
+              {/* Spinning dashed ring on hover */}
+              <div className="absolute inset-0 rounded-full border border-dashed border-emerald-500/20 group-hover:rotate-45 transition-transform duration-700"></div>
+              <Leaf size={20} className="group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <div className="text-center mt-1 flex flex-col items-center">
+              <span className="text-sm font-black tracking-wider text-slate-900 uppercase leading-none">EcoSync</span>
+              <span className="text-[8px] block text-emerald-600 font-bold uppercase tracking-widest mt-0.5">Circular SaaS</span>
+            </div>
+          </div>
+
+          {/* User Section / Authentication (Right) */}
+          <div className="flex items-center gap-4 text-xs col-start-3 justify-self-end">
             {currentUser ? (
               <div className="flex items-center gap-3">
                 <div className="text-right hidden sm:block">
